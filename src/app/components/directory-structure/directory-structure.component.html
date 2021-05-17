@@ -1,0 +1,69 @@
+<div class="directory-structure-container">
+    <div class="project-header">
+        <span (click)="showProjectFiles=!showProjectFiles" [ngClass]="{'close':showProjectFiles}">Project-Name</span>
+    </div>
+    <div *ngIf="!showProjectFiles">
+        <div class="directory src" style="padding-left:15px;" (contextmenu)="open($event); $event. preventDefault();">
+            <span class="open">src</span>
+        </div>
+
+        <div class="file src" style="padding-left:25px;" (contextmenu)="open($event); $event. preventDefault();">
+            <span class="html">index.html</span>
+        </div>
+        <div class="file src" style="padding-left:25px;" (contextmenu)="open($event); $event. preventDefault();">
+            <span class="css">style.css</span>
+        </div>
+        <div class="file src" style="padding-left:25px;" (contextmenu)="open($event); $event. preventDefault();">
+            <span class="ts">test.ts</span>
+        </div>
+        <div class="file src" style="padding-left:25px;" (contextmenu)="open($event); $event. preventDefault();">
+            <span class="ts">polyfill.ts</span>
+        </div>
+        <div class="file src" style="padding-left:25px;" (contextmenu)="open($event); $event. preventDefault();">
+            <span class="favicon">favicon.ico</span>
+        </div>
+        <div class="directory src" style="padding-left:25px;" (contextmenu)="open($event); $event. preventDefault();">
+            <span class="open">app</span>
+
+        </div>
+        <div class="file src-app" style="padding-left:35px;" (contextmenu)="open($event); $event. preventDefault();">
+            <span class="html">app.component.html</span>
+        </div>
+        <div class="file src-app" style="padding-left:35px;" (contextmenu)="open($event); $event. preventDefault();">
+            <span class="ts">app.component.ts</span>
+        </div>
+        <div class="file src-app" style="padding-left:35px;" (contextmenu)="open($event); $event. preventDefault();">
+            <span class="ts">app.component.spec.ts</span>
+        </div>
+        <div class="file src-app" style="padding-left:35px;" (contextmenu)="open($event); $event. preventDefault();">
+            <span class="ts">app.module.ts</span>
+        </div>
+
+        <div class="directory src-app" style="padding-left:35px;" (contextmenu)="open($event); $event. preventDefault();">
+            <span class="open">components</span>
+        </div>
+        <div class="directory src-app-components" style="padding-left:45px;" (contextmenu)="open($event); $event. preventDefault();">
+            <span class="close">chat-component</span>
+        </div>
+        <div class="directory src-app-components" style="padding-left:45px;" (contextmenu)="open($event); $event. preventDefault();">
+            <span class="close">message-component</span>
+        </div>
+
+        <div class="file src" style="padding-left:25px;" (contextmenu)="open($event); $event. preventDefault();">
+            <span class="json">package.json</span>
+        </div>
+        <div class="file src" style="padding-left:25px;" (contextmenu)="open($event); $event. preventDefault();">
+            <span class="json">package.lock.json</span>
+        </div>
+
+        <div class="file src" style="padding-left:25px;" (contextmenu)="open($event); $event. preventDefault();">
+            <span class="md">readme.md</span>
+        </div>
+        <ng-template #userMenu let-user>
+            <section class="file-folder-menu">
+                <div (click)="delete(user)" class="menu-item delete">Delete</div>
+                <div class="menu-item edit">Send to</div>
+            </section>
+        </ng-template>
+    </div>
+</div>

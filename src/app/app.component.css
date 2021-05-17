@@ -1,0 +1,105 @@
+.my-code-editor  {
+    /* height: calc(100vh); */
+}
+.language-picker{
+    margin-top: 6px;
+margin-left: 23px;
+
+}
+
+
+.text-editor-wrap {
+    display: block;
+    margin: auto;
+    clear: both;
+    overflow: hidden;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+
+#terminal{
+    background-color: rgb(0, 0, 0);
+    overflow-y: scroll;
+}
+
+
+.title-bar {
+    padding: 5px 0;
+    font-family: "Lucida Grande", sans-serif;
+    font-size: 0.75em;
+    color:black;
+    text-align: center;
+    text-shadow: rgba(255, 255, 255, 0.8) 0px 1px 0px;
+    background-color: #f8f8f8;
+    background-image: -webkit-linear-gradient(top, #e8e8e8, #bcbbbc);
+    background-image: -moz-linear-gradient(top, #e8e8e8, #bcbbbc);
+    background-image: linear-gradient(top, #e8e8e8, #bcbbbc);
+    box-shadow: inset rgba(255, 255, 255, 0.7) 0px 1px 1px;
+    border-bottom: #6a6a6a 1px solid;
+}
+
+
+
+.text-body {
+    
+    padding: 10px;
+    color: #f0f0f0;
+    text-shadow: #000 0px 1px 0px;
+    font-family: "Consolas", "Courier New", "Courier";
+    font-size: 15px;
+    line-height: 1.40em;
+    font-weight: 500;
+    text-align: left;
+    overflow: hidden;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+
+ul, #myUL {
+    list-style-type: none;
+  }
+  
+  /* Remove margins and padding from the parent ul */
+  #myUL {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style the caret/arrow */
+  .caret {
+    cursor: pointer; 
+    user-select: none; /* Prevent text selection */
+  }
+  
+  /* Create the caret/arrow with a unicode, and style it */
+  .caret::before {
+    content: "\25B6";
+    color: black;
+    display: inline-block;
+    margin-right: 6px;
+  }
+  
+  /* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+  .caret-down::before {
+    transform: rotate(90deg); 
+  }
+  
+  /* Hide the nested list */
+  .nested {
+    display: none;
+  }
+  
+  /* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+  .active {
+    display: block;
+  }
+
+  .nested{
+      padding-inline-start: 0px;
+  }
